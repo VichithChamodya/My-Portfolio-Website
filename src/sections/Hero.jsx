@@ -1,5 +1,8 @@
-import Button from "../components/Button"
-import { words } from "../constants"
+import Button from "../components/Button.jsx";
+import HeroExperience from "../components/hero_models/HeroExperience";
+import { words } from "../constants/index.js";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Hero = () => {
     return (
@@ -10,7 +13,7 @@ const Hero = () => {
 
             <div className="hero-layout">
                 {/* left side - hero content */}
-                <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+                <header className="flex flex-col justify-center w-full md:px-20 px-5">
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                             <h1>Shaping
@@ -28,19 +31,21 @@ const Hero = () => {
                             <h1>into Real Projects</h1>
                             <h1>that Deliver Results</h1>
                         </div>
-                        <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">Hi, I'm Vichith, a mobile app developer specialized in
-                            Flutter and Kotlin, passionate about
-                            creating high-quality, efficient
-                            applications and contributing to
-                            innovative projects while driving
-                            continuous improvement and
-                            professional growth
+                        <p className="text-white-50 md:text-xl relative z-10">
+                            Hi, I'm Vichith, a mobile app developer specialized in Flutter and Kotlin,<br/>
+                            passionate about creating high-quality, efficient applications and<br/>
+                            contributing to innovative projects while driving continuous improvement and professional growth
                         </p>
                         <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="see my work" />
                     </div>
 
                 </header>
                 {/* right side - 3d model */}
+                <figure>
+                    <div className="hero-3d-layout">
+                        <HeroExperience />
+                    </div>
+                </figure>
             </div>
 
         </section>
