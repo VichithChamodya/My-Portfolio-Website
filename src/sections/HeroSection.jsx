@@ -1,12 +1,12 @@
+import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 
 import { words } from "../constants/index.js";
 import Button from "../components/Button.jsx";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
-import HeroExperience from "../components/hero_models/HeroExperience";
+import HeroExperience from "../components/hero_models/HeroExperience.jsx";
 
-const Hero = () => {
+const HeroSection = () => {
     useGSAP(() => {
         gsap.fromTo(".hero-text h1", {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power2.inOut"});
     });
@@ -57,4 +57,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default HeroSection

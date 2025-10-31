@@ -1,9 +1,11 @@
-import Hero from "./sections/Hero";
+import HeroSection from "./sections/HeroSection.jsx";
+import ShowcaseSection from "./sections/ShowcaseSection.jsx";
 
 const App = () => {
   return (
     <>
-      <Hero />
+      <HeroSection />
+      <ShowcaseSection />
     </>
   )
 }
